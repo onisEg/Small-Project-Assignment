@@ -1,0 +1,175 @@
+body{
+    background: #e2e6ff;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    padding: 0;
+}
+.full-screen{
+    margin-top: 4rem;
+    border-radius: 5px;
+
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.project-title-text{
+    border-right: solid 1px #d4d4d4;
+    display: flex;
+    align-items: center;
+}
+.project-title-text span{
+    padding: 5px 10px;
+    
+}
+
+.help{
+    
+    padding: 0;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+.help button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 5px 16px;
+    transition: 0.3s;
+}
+
+.help button:hover {
+    background: #3a52d9;
+    letter-spacing: .5px;
+}
+/* ===================== */
+
+
+.body-1 .row img{
+    max-width: 100%;
+     
+}
+.product-info .row-1{
+    background: #f6f4ff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+
+}
+
+.product-info .row>* {
+    width: fit-content ;
+    text-transform: capitalize;
+    
+}
+.product-info .product-name h6{
+    text-transform: capitalize;
+}
+
+.product-info .row-1 button{
+    color: white;
+    padding: 4px 10px;
+    text-transform: capitalize;
+    
+}
+.product-info .row-2 {
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.count input{
+    width: 45px;
+    height: 25px;
+    border-radius: 5px;}
+.count button{
+    border: none;
+    border-radius: 5px;
+    background: #3a52d9;
+    color: white;
+}
+.row-2 .sub-title{
+    font-size: 10px;
+}
+
+/* ======================= */
+
+table{
+    /* border-collapse: inherit; */
+    max-width: 96% !important;
+    margin: auto;
+    text-align: center;
+    
+    
+}
+thead {
+    
+    background: #1a3584;
+    color: white;
+}
+thead tr{
+    text-transform: uppercase;
+}
+
+.prife{
+    padding: 15px 2px;
+    background: #1a3584;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 96%;
+    margin-left: 2px;
+    border-radius: 5px;
+    
+}
+.prife span{
+    color: greenyellow;
+}
+.cost{
+    width: fit-content;
+    
+}
+
+/* ================================== */
+.body-2{
+    background-color: #e2e6ff;
+}
+.searchCat{
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.searchCat i{
+    border: solid 1px ;
+    padding: 10px;
+    background: #1a3584;
+    color: white;
+    border-radius: 5px;
+}
+.searchCat p{
+    padding: 0px 10px;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    transition: .3s;
+}
+.searchCat p:hover{
+    letter-spacing: 1px ;
+    cursor: pointer;
+}
+
+/* ====================================== */
+.pay button{
+    height: 5rem;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    color: white;
+}
