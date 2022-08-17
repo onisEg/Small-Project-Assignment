@@ -173,3 +173,16 @@ thead tr{
     text-transform: capitalize;
     color: white;
 }
+
+
+/* ============================================ */
+
+/* mobile  */
+@media screen and (max-width: 600px) {
+    .full-screen{
+        max-width: 95%;
+    }
+    .row.prife{
+        margin-bottom: 1rem;
+    }
+  }
