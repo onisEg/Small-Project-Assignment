@@ -2,15 +2,43 @@ body{
     background: #e2e6ff;
     font-family: 'Roboto', sans-serif;
     font-family: 'Work Sans', sans-serif;
+    text-transform: capitalize;
 }
+
+
 .container{
     padding: 0;
 }
 .full-screen{
     margin-top: 4rem;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+/* ========================= */
+.card{
+    transition: .5s;
 
 }
+.col-lg-2 .card:hover{
+    scale: 1.05;
+}
+.card img{
+    border-radius: 5px;
+    
+}
+.card a{
+    text-decoration: none;
+    color: #1a3584;
+}
+
+
+
+
+
+
+
+/* =============================== */
 .project-title{
     display: flex;
     justify-content: space-between;
@@ -139,6 +167,12 @@ thead tr{
 .body-2{
     background-color: #e2e6ff;
 }
+.body-2 img{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;;
+}
 .searchCat{
     display: flex;
     align-items: center;
@@ -160,11 +194,13 @@ thead tr{
     text-transform: capitalize;
     transition: .3s;
 }
-.searchCat p:hover{
+.searchCat:hover p{
     letter-spacing: 1px ;
     cursor: pointer;
 }
-
+.pay:hover{
+    scale: 1.01;
+}
 /* ====================================== */
 .pay button{
     height: 5rem;
@@ -173,7 +209,6 @@ thead tr{
     text-transform: capitalize;
     color: white;
 }
-
 
 /* ============================================ */
 
