@@ -23,8 +23,8 @@
  <section">
   <div class="text-center container py-5">
     <h4 class="mt-4 mb-5"><strong>our products</strong></h4>
-    <div class="row" id="products">
-      <!-- products comes form js -->
+    <div class="row" id="cols">
+      
     </div>
   </div>
 </section>
@@ -38,16 +38,15 @@
       <div class="body-1 col-md-8">
         <div class="row py-4">
           <div class=" col-md-3 border-end " > 
-            <img id="chosenProImg" src="images/7.jpg" alt="">  
+            <img id="chosenProImg" src="" alt="">  
           </div>
           <div class="col-md-9 product-info">
             <div class="row row-1 py-3">
               <div class="title">
-                <h4 class="fw-bold " id="chosenProTitle">تفاح </h4>
+                <h6 id="chosenProTitle"> </h6>
               </div>
-              <div class="delete" id="addbtn">
-                
-                <button class="btn bg-success " id="add">add <i class="fa-solid fa-cart-arrow-down"></i></button>
+              <div class="delete" >
+                <button class="btn bg-success " id="addbtn" data-productid="0"> add</button>
               </div>
             </div>
             <div class="row row-2">
@@ -55,7 +54,7 @@
                 <span class="sub-title">price, usd </span>
                 <div  class="d-flex">
                   <p>₺</p>
-                  <h5 id="chosenProPrice">10</h5>
+                  <h5 id="chosenProPrice"></h5>
                 </div>
                 
               </div>
@@ -63,13 +62,13 @@
                 <span class='sub-title'>quantity , pc </span>
                 <div class="count">
                   <button id="decreasItems" onclick="decrement()"><i class="fa-solid fa-minus"></i></button>
-                  <input  id="quantityCurentProduct" class=" text-center  " type="text" value="1">
+                  <input class="text-center"  id="quantityCurentProduct" type="text" value="1">
                   <button id="increasItems" onclick="increment()"><i class="fa-solid fa-plus"></i></button>
                 </div>
               </div>
               <div class=" col-md-4">
                 <span class='sub-title'>total, ₺ </span>
-                <h3 id="totalItems" >10</h3>                
+                <p id="totalItems" ></p>                
               </div>
             </div>
           </div>
@@ -91,27 +90,7 @@
               </thead>
               <tbody class="text-dark " id="tbody">
                 <!-- USER 1 -->
-                <tr class="table-gray" data-bs-toggle="note" data-bs-trigger="hover focus" data-bs-content="2022-06-18 12:00 - 20:00 <br><b>Te presteren:</b> 07:30" data-bs-original-title="">
-                  <td class="text-center text-gray">1</td>
-                  <td><strong>product 1</strong></td>
-                  <td class="text-center">
-                    <button class="btn btn-close "></button>                        
-                  </td>
-                  <td class="text-center d-flex justify-content-center"><p>₺</p> <span class="mx-1">45</span></td>
-                  <td class="text-center">2</td>
-                  <td class="text-center">99</td>                      
-                </tr>
-                <!-- USER 1 -->
-                <tr class="table-gray" data-bs-toggle="note" data-bs-trigger="hover focus" data-bs-content="2022-06-18 12:00 - 20:00 <br><b>Te presteren:</b> 07:30" data-bs-original-title="">
-                  <td class="text-center text-gray">1</td>
-                  <td><strong>product 1</strong></td>
-                  <td class="text-center">
-                    <button class="btn btn-close "></button>                        
-                  </td>
-                  <td class="text-center d-flex justify-content-center"><p>₺</p> <span class="mx-1">45</span></td>
-                  <td class="text-center">2</td>
-                  <td class="text-center">99</td>                      
-                </tr>
+                
               
                
               </tbody>
@@ -127,13 +106,13 @@
           <div class="numbers w-auto">
             <div  class="d-flex">
               <p>₺</p>
-              <h5  class="mx-1">88</h5>
+              <h5  class="mx-1" id="priceTotle">88</h5>
             </div>
            
             <span>₺</span><span> -4.14 </span>
             <div  class="d-flex">
               <h4>₺</h4>
-              <h4 class="mx-1"> 94.5 </h4>
+              <h4 class="mx-1" id="totalToPay" > 94.5 </h4>
             </div>
           </div>
         </div>
