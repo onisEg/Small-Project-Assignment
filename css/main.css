@@ -167,12 +167,6 @@ thead tr{
 .body-2{
     background-color: #e2e6ff;
 }
-.body-2 img{
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0.25rem !important;
-    border-bottom-left-radius: 0.25rem !important;;
-}
 .searchCat{
     display: flex;
     align-items: center;
