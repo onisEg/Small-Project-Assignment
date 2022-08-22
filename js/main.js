@@ -15,7 +15,7 @@ getProduct = function () {
     var cartona = "";
     for (i = 0; i < product.length; i++) {
         cartona += `
-        <div class="col-lg-2 col-md-4 mb-4 ">
+        <div class="col-lg-2 col-md-4 col-6 mb-4 ">
         
         <div class="card ">
           <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
