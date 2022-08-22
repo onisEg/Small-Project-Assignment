@@ -8,8 +8,16 @@ var product = [
     { "id": "6", "title": "خوخ", "image": "6.jpg", "price": 8 },
 ]
 
-var cardOfProduct = [];
-var x = 1;
+
+var Quantity = 1;
+
+var cardOfProduct;
+if(localStorage.vegaProdacts != null){
+    cardOfProduct = JSON.parse(localStorage.vegaProdacts);
+
+}else{
+    cardOfProduct=[];
+}
 
 getProduct = function () {
     var cartona = "";
@@ -39,6 +47,8 @@ getProduct = function () {
         `
     }
     document.getElementById("cols").innerHTML = cartona;
+    
+    
 }
 
 
@@ -52,19 +62,10 @@ getProductById = function (productId) {
             $("#chosenProTitle").text(product[i].title)
             $("#addbtn").attr('data-productid', `${product[i].id}`);
             total()
-            x
+            Quantity;
         }
     }
 }
-
-// =========================================
-var cardOfProduct ;
-if(localStorage.vegaProdacts != null){
-    cardOfProduct = JSON.parse(localStorage.vegaProdacts)
-}else{
-    cardOfProduct=[]
-}
-
 
 
 // =========================================
@@ -77,15 +78,17 @@ $("#addbtn").on('click', function () {
             var setProduct = {
                 "title": product[i].title,
                 "price": product[i].price,
-                "total": x * product[i].price,
-                "QUANTITY": x,
+                "total": Quantity  * product[i].price,
+                "QUANTITY": Quantity ,
                 "id":product[i].id,
             }
         }
+        
     }
-    cardOfProduct.push(setProduct)
+    cardOfProduct.push(setProduct);
+    //save data in localstorage 
+    localStorage.setItem("vegaProdacts" , JSON.stringify(cardOfProduct));
     //save data in localstoreg 
-    localStorage.setItem("vegaProdacts ", JSON.stringify(setProduct));
     displayTable()
     
 })
@@ -113,8 +116,9 @@ displayTable=function(){
     
     document.getElementById("tbody").innerHTML = cartona;
     $("#priceTotle").text(totlePrice);
+    
 }
-
+$("#totalToPay").text(totlePrice);
 // ==============================================
 // delete form table 
 deleteProduct = function(indexOfProduct){
@@ -128,25 +132,30 @@ deleteProduct = function(indexOfProduct){
 // ================================
 // increment button 
 function increment() {
-    x++;
-    $("#quantityCurentProduct").val(x)
+    Quantity ++;
+    $("#quantityCurentProduct").val(Quantity )
     total()
 }
+
 //================================
 // decrement button
 function decrement() {
-    if (x > 1) {
-        x--;
-        $("#quantityCurentProduct").val(x)
+    if (Quantity  > 1) {
+        Quantity--;
+        $("#quantityCurentProduct").val(Quantity )
     } else {
         $("#quantityCurentProduct").val(1)
     }
     total()
 
 }
+
 // ==============================================
 // get total 
 function total() {
-    var totlePrice = +$("#chosenProPrice").text() * x;
+    var totlePrice = +$("#chosenProPrice").text() * Quantity ;
     $("#totalItems").text(totlePrice)
 }
+
+// ===============================================
+// total to pay 
