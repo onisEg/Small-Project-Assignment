@@ -11,13 +11,6 @@ var product = [
 
 var Quantity = 1;
 
-var cardOfProduct;
-if(localStorage.vegaProdacts != null){
-    cardOfProduct = JSON.parse(localStorage.vegaProdacts);
-
-}else{
-    cardOfProduct=[];
-}
 
 getProduct = function () {
     var cartona = "";
@@ -67,6 +60,16 @@ getProductById = function (productId) {
     }
 }
 
+// ============================================
+var cardOfProduct;
+if(localStorage.getItem("vegaProdacts")  != null){
+
+    cardOfProduct = JSON.parse(localStorage.getItem("vegaProdacts"));
+    
+
+}else{
+    cardOfProduct=[];
+}
 
 // =========================================
 // make products array and push on cart
