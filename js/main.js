@@ -118,15 +118,21 @@ displayTable=function(){
     $("#priceTotle").text(totlePrice);
     
 }
-$("#totalToPay").text(totlePrice);
+
 // ==============================================
 // delete form table 
-deleteProduct = function(indexOfProduct){
-    cardOfProduct.splice(indexOfProduct,1)
+deleteProduct=function(index){
+    cardOfProduct.splice(index,1)
     displayTable()
-    console.log( cardOfProduct );
+    setToLocalStorege()
+    
 }
 
+// =============================================
+// set To LocalStorege
+setToLocalStorege=function(){
+    localStorage.setItem("vegaProdacts" , JSON.stringify(cardOfProduct));
+}
 
 
 // ================================
